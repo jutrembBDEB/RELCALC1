@@ -1,2 +1,2 @@
 # RELCALC1
-livre libre de calcul différentiel
+Livre libre de calcul différentiel
