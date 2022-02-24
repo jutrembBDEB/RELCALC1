@@ -1,3 +1,2 @@
 # RELCALC1
-Ressources éducatives libres
-Calcul différentiel
+Ressources éducatives libres en calcul différentiel
