@@ -56,8 +56,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
   </latex-image-preamble>
 
-  <rename element="exploration">Preview Activity</rename>
-  <rename element="objectives">Motivating Questions</rename>
+  <rename element="exploration">Exploration</rename>
+  <rename element="objectives">Questionnements déclencheurs</rename>
   <rename element="fact">Formule</rename>
 
   </docinfo>
@@ -68,8 +68,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <title>Calcul différentiel</title>
     <subtitle>Une approche libre</subtitle>
 
-<!--    <xi:include href="./C1-Vecteurs-Geometrie.xml" />
-    <xi:include href="./C2-Differentiel.xml" />
+    <xi:include href="./C1-Prealables.xml" />
+<!--    <xi:include href="./C2-Differentiel.xml" />
     <xi:include href="./C3-Integrales-multiples.xml" />
     <xi:include href="./C4-Calcul-vectoriel.ptx" /> -->
     </book>

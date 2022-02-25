@@ -1,0 +1,3 @@
+file:/c:/GitHub/RELCALC1/source-Pretext/livre-calcul1.xml:70:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element idx, got subtitle
+file:/c:/GitHub/RELCALC1/source-Pretext/livre-calcul1.xml:70:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element subtitle there
+file:/c:/GitHub/RELCALC1/source-Pretext/livre-calcul1.xml:68:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element book failed to validate content

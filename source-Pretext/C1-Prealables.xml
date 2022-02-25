@@ -1,0 +1,18 @@
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="C-1">
+  <title>Préalables et notions de base</title>
+
+
+  <xi:include  href="Sec1.xml"/>
+<!--  <xi:include  href="Sec1-2-Vecteurs.xml"/>
+  <xi:include  href="Sec1-3-Produit-scalaire.xml"/>
+  <xi:include  href="Sec1-4-Produit-vectoriel.xml"/>
+  <xi:include  href="Sec1-5-Droites-plans.xml"/>
+  <xi:include  href="Sec1-6-Courbes.xml"/>
+  <xi:include  href="Sec1-7-Tangentes.xml"/>
+  <xi:include  href="Sec1-8-Longueur-courbure.xml"/>
+-->
+<!--
+  <xi:include  href="ZZ-interact-sagetex.xml"/>
+-->
+</chapter>
