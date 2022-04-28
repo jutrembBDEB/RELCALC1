@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<chapter xml:id="limites" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Limites</title>
+  <introduction>
+    <p>
+    Dans ce chapitre, nous présentons le concept de limite qui est à la base de la formalisation du calcul de dérivée
+    </p>
+  </introduction>
+
+  <xi:include href="limites-intuition.ptx" />
+  <xi:include href="limites-formalisation.ptx" />
+  <xi:include href="limites-proprietes.ptx" />
+
+</chapter>

@@ -8,25 +8,25 @@
   <targets>
     <target name="html">
       <format>html</format>
-      <source>livre-calcul1.xml</source>
+      <source>source/main.ptx</source>
       <publication>publication/publication.ptx</publication>
       <output-dir>output/html</output-dir>
     </target>
     <target name="latex">
       <format>latex</format>
-      <source>livre-calcul1.xml</source>
+      <source>source/main.ptx</source>
       <publication>publication/publication.ptx</publication>
       <output-dir>output/latex</output-dir>
     </target>
     <target name="pdf" pdf-method="pdflatex">
       <format>pdf</format>
-      <source>livre-calcul1.xml</source>
+      <source>source/main.ptx</source>
       <publication>publication/publication.ptx</publication>
       <output-dir>output/pdf</output-dir>
     </target>
     <target name="subset">
       <format>html</format>
-      <source>livre-calcul1.xml</source>
+      <source>source/main.ptx</source>
       <publication>publication/publication.ptx</publication>
       <output-dir>output/subset</output-dir>
       <stringparam key="debug.skip-knowls" value="yes"/>
