@@ -29,6 +29,7 @@
       <title>Fonctions rationnelles</title>
 
       <xi:include href="texte/prealables.ptx" />
+      <xi:include href="texte/limites.ptx" />
     </part>
   </book>
 
