@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="fr-CA">
+  <docinfo>
+    <latex-image-preamble>
+      \usepackage{tikz}
+      \usetikzlibrary[arrows.meta]
+    </latex-image-preamble>
+
+    <xi:include href="misc/latex_macros.ptx" />
+
+    <!--
+      <rename element="exploration">Preview Activity</rename>
+      <rename element="objectives">Motivating Questions</rename>
+      <rename element="fact">Formule</rename>
+    -->
+  </docinfo>
+
+  <book xml:id="relcalc1">
+    <title>RELCALC 1</title>
+
+    <introduction>
+      <p>
+        Ces ressources éducatives libres sur le calcul différentiel ont été produites par Jean-Philippe Morin, Juan Carlos Bustamante, Julie Tremblay et Sylvain Bérubé.
+      </p>
+    </introduction>
+
+    <part>
+      <title>Fonctions rationnelles</title>
+
+      <xi:include href="texte/prealables.ptx" />
+    </part>
+  </book>
+
+</pretext>

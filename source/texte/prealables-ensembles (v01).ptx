@@ -1,0 +1,414 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+"D:\Dropbox\A Sylvain Bérubé\A-4 Enseignement\Projets, activités\2021 RELCALC\PreTeXt\Relcalc-1-test\book"
+-->
+
+<!--
+Révision
+ - Ensemble : https://fr.wikipedia.org/wiki/Ensemble
+ - Voir Édouard-Montpetit
+ - Autres références ?
+-->
+
+<section xml:id="ensembles-nombres-intervalles">
+<title>Ensembles, nombres, et intervalles</title>
+<p>...</p>
+
+
+
+
+<subsection xml:id="notation-ensembliste">
+<title>Notation ensembliste</title>
+<p>
+Vous avez tous acquis quelques notions de base sur la théorie des ensembles à l'école : ensembles, intersections, unions, diagrammes de Venn, etc. La théorie des ensembles est maintenant si profondément ancré dans les mathématiques qu'il est difficile d'imaginer comment les mathématiques auraient pu exister sans elle. Or, cela vous étonnera peut-être d'apprendre que la théorie des ensembles est beaucoup plus récente que le calcul différentiel. En effet, la théorie des ensembles mathématiquement rigoureuse n'a vraiment été développée qu'au 19<m>^e</m> siècle, principalement par Georg Cantor
+  <fn>
+  Un mathématicien extrêmement intéressant qui est responsable d'une grande partie de notre compréhension de l'infini. Ses résultats les plus célèbres sont sans doute qu'il y a plus de nombres réels que d'entiers et qu'il existe un nombre infini d'infinités différentes. Son travail, bien que désormais considéré comme extrêmement important, n'a pas été accepté par ses pairs à l'époque et il a été qualifié de <q>corrupteur de jeunesse</q> pour l'avoir enseigné. Pour une raison quelconque, nous savons qu'il a passé une grande partie de sa lune de miel à parler et à faire des mathématiques avec Richard Dedekind.
+  </fn>.
+Les mathématiciens utilisaient des ensembles auparavant, mais ils le faisaient sans définir les choses de manière trop rigoureuse et formelle.
+</p>
+
+<p>
+En mathématiques (et ailleurs, y compris dans la <q>vie réelle</q>), nous sommes habitués de manipules des collections de choses. Par exemple:
+<ul>
+  <li> une famille est une collection d'individus;</li>
+  <li> une équipe de hockey est une collection de joueurs de hockey;</li>
+  <li> une liste de courses est une collection d'articles que nous devons acheter.</li>
+</ul>
+</p>
+
+<p>
+Généralement, lorsque nous donnons des définitions mathématiques, nous essayons de les rendre très formelles et rigoureuses afin qu'elles soient aussi claires que possible. Nous devons faire cela pour que, lorsque nous rencontrons un objet mathématique, nous puissions déterminer avec une certitude absolue s'il satisfait ou non à la définition.
+</p>
+
+<p>
+Malheureusement, de donner une définition complètement rigoureuse de la notion d'ensemble prendrait beaucoup plus de notre temps que nous ne le souhaiterions vraiment
+  <fn>Le lecteur intéressé est invité à s'informer sur le <url href="https://fr.wikipedia.org/wiki/Paradoxe_de_Russell">paradoxe de Russell</url>, la <url href="https://fr.wikipedia.org/wiki/Th%C3%A9orie_des_ensembles">théorie axiomatique des ensembles</url> et la <url href="https://fr.wikipedia.org/wiki/Th%C3%A9orie_des_ensembles_de_Zermelo-Fraenkel">théorie des ensembles de Zermelo-Fraenkel</url> pour une description beaucoup plus complète de la théorie des ensembles.
+  </fn>.
+</p>
+
+<definition xml:id="def_ensemble"><title>Ensemble</title>
+<statement><p>
+Un <em>ensemble</em> est une collection d'objets distincts. Les objets sont appelés <em>éléments</em> de l'ensemble.
+</p></statement>
+</definition>
+
+<p>
+Pour représenter des ensembles, la convention mathématiques en vigueur est d'utiliser des lettres majuscules, par exemple <m>A, B, C, X, Y</m>. Et pour représenter les éléments d'un ensemble, on utilise plutôt des lettres minuscules, par exemple <m>a, b, c, x, y</m>.</p>
+
+<p>
+Maintenant que nous avons défini ce qu'est un ensemble, que pouvons-nous en faire? En fait, il n'y a qu'une chose que nous pouvons demander à un ensemble:
+</p>
+<blockquote>
+<p>
+<q>Cet élément fait-il partie de l'ensemble?</q>
+</p></blockquote>
+<p>
+Et l'ensemble répondra:
+</p>
+<blockquote>
+<p>
+<q>oui</q> ou <q>non</q>.
+</p>
+</blockquote>
+
+<p>
+Par exemple, si <m>A</m> est l'ensemble des nombres pairs, nous pouvons demander <q>Est-ce que 4 est dans <m>A</m>?</q> Nous obtenons alors la réponse <q>oui</q>. Pour signifier que l'élément 4 appartient à l'ensemble <m>A</m>, nous écrivons
+<md>
+<mrow>
+  4 \in A
+</mrow>
+</md>
+Alors que si nous demandons <q>Est-ce que <m>3</m> est dans <m>A</m>?</q>, nous obtenons la réponse <q>non</q>. Mathématiquement, nous écrivons alors
+<md>
+<mrow>
+  3 \notin A
+</mrow>
+</md>
+Ainsi, le symbole <m>\in</m> est un raccourci mathématique pour dire <q>est un élément de</q>, tandis que le même symbole barré <m>\notin</m> est un raccourci pour dire <q>n'est pas un élément de</q>.
+</p>
+<p>
+Notez que ces deux déclarations, bien qu'elles soient écrites sous forme de courtes chaînes de trois symboles, sont en réalité des phrases complètes:
+<ul>
+  <li>« <m>4 \in A</m> » se lit comme « Quatre est un élément de <m>A</m>. »</li>
+  <li>« <m>3 \notin A</m> » se lit comme « Trois n'est pas un élément de <m>A</m>. »</li> 
+</ul>
+Les symboles mathématiques <q><m>+</m></q>, <q><m>=</m></q> et <q><m>\in</m></q> sont des raccourcis
+<fn>
+Par <q>raccourcis</q>, nous entendons une collection de symboles et d'abréviations acceptés pour nous permettre d'écrire plus rapidement et, espérons-le, plus clairement.
+</fn>
+et les énoncés mathématiques <q><m>4+3=7</m></q> sont des phrases complètes.
+</p>
+<p>
+C'est un point important. L'écriture mathématique est comme n'importe quel autre type d'écriture. Il est facile de mettre un tas de symboles ou de mots sur la page, mais vous devez garder à l'esprit que quelqu'un d'autre doit pouvoir les lire et les comprendre.
+</p>
+
+<p>
+Nous rencontrerons plusieurs ensembles différents en faisant des mathématiques. Ces ensembles doivent être définis précisément afin de pouvoir répondre à la question <q>Cet objet est-il dans l'ensemble ou non?</q>
+<ul>
+  <li> <q>Soit <m>A</m> l'ensemble de tous les entiers pairs entre 1 and 13.</q> <mdash/> très clair.</li>
+  <li> <q>Soit <m>B</m> l'ensemble des personnes grandes dans cette classe.</q> <mdash/> pas clair.</li>
+</ul>
+Plus généralement, s'il n'y a qu'un petit nombre d'éléments dans l'ensemble, nous les énumérons tous:
+
+<ul>
+  <li><q>Soit <m>C = \{1,2,3\}</m>.</q></li>
+</ul>
+Lorsque nous écrivons la liste, nous plaçons les éléments entre accolades <q><m>\{ \cdot \}</m></q>. Notez que l'ordre dans lequel nous écrivons les choses n'a pas d'importance
+<me>
+C = \{1,2,3\} = \{2,1,3\} = \{3,2,1\}
+</me>
+car la seule chose que nous pouvons demander est <q>Cet objet est-il un élément de <m>C</m>?</q> Nous ne pouvons pas poser de questions plus complexes comme <q>Quel est le troisième élément de <m>C</m>?</q>, nous avons besoin d'objets mathématiques plus sophistiqués pour poser de telles questions
+  <fn>
+  Le lecteur intéressé est invité à regarder les <q>listes</q>, <q>multisets</q>, <q>ensembles totalement ordonnés</q> et <q>ensembles partiellement ordonnés</q> parmi beaucoup d'autres objets mathématiques qui généralisent l'idée de base des ensembles.
+  </fn>.
+De même, peu importe combien de fois nous écrivons le même objet dans la liste
+<me>
+C = \{1,1,1,2,3,3,3,3,1,2,1,2,1,3\} = \{1,2,3\}
+</me>
+car tout ce que nous demandons est <q>Est-ce que <m>1 \in C</m>?</q>. Et non <q>Combien de fois 1 est dans <m>C</m>?</q>.
+</p>
+
+<p>
+Maintenant, si l'ensemble est un peu plus grand, nous pourrions écrire quelque chose comme ça
+<ul>
+  <li> <m>C = \{1,2,3,\dots,40\}</m> l'ensemble de tous les entiers entre 1 et 40 inclusivement. </li>
+  <li> <m>A = \{1,4,9,16,\dots\}</m> l'ensemble de tous les carrés parfaits
+    <fn>
+    c'est-à-dire les entiers pouvant être écrits comme le carré d'un autre entier.
+    </fn>
+  </li>
+</ul>
+Le <q><m>\dots</m></q> est à nouveau un raccourci pour les entrées manquantes. Vous devez être prudent avec cela car vous pouvez facilement confondre le lecteur
+
+<ul>
+  <li>
+  l'ensemble <m>B = \{3,5,7,\dots\}</m> représente-t-il tous les nombres premiers impairs, ou tous les nombres impairs supérieurs à 1 ou ?? Ce qui est écrit ne suffit pas pour que nous ayons une idée précise de ce que l'auteur a voulu dire.
+  </li>
+</ul>
+
+N'utilisez ceci que là où le contexte est parfaitement clair. Quelques mots supplémentaires peuvent épargner au lecteur (et à vous-même) beaucoup de confusion. Pensez toujours au lecteur!</p>
+</subsection>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<subsection xml:id="ensembles-de-nombres">
+<title>Ensembles de nombres</title>
+
+<p>
+Avant de faire quoi que ce soit d'autre, il est très important que nous nous mettions d'accord sur les définitions et les noms de certaines collections importantes de nombres.
+</p>
+
+<p>
+Les <alert>nombres naturels</alert> sont les entiers 0, 1, 2, 3, <ellipsis/> que nous apprenons en premier à peu près en même temps que nous apprenons l'alphabet. Nous désignons cette collection de nombres par le symbole <m>\mathbb{N}</m>. Le symbole <m>\mathbb{N}</m> est écrit dans un type de police en gras que nous appelons <q>black-board bold</q> (et n'est certainement <em>pas</em> le même symbole que <m>N</m>). Vous devriez vous habituer à écrire quelques lettres de cette manière, car elle est généralement utilisée pour désigner des ensembles de nombres importants. Malheureusement, il y a souvent une certaine confusion quant à savoir si zéro doit être inclus ou non dans les nombres naturels.
+</p>
+
+<p>
+Notez que l'ensemble des nombres naturels est <em>fermé</em> sous l'addition et la multiplication. Cela signifie que si vous prenez deux nombres naturels et que vous les additionnez, vous obtenez un autre nombre naturel. De même, si vous prenez deux nombres naturels et que vous les multipliez, vous obtenez un autre nombre naturel. Cependant l'ensemble n'est pas fermé par soustraction ou division : nous avons besoin de nombres négatifs et de fractions pour faire des ensembles de nombres fermés par soustraction et division.</p>
+
+
+<p>
+Les <alert>nombres entiers</alert> sont tous nombres entiers positifs et négatifs. On utilise fréquemment l'appellation nombres entiers relatifs. Nous désignons la collection de tous les entiers par le symbole <m>\mathbb{Z}</m>. Encore une fois, notez qu'il ne s'agit pas du même symbole que <m>Z</m>, et nous devons l'écrire dans la même police de caractère gras. Le <m>\mathbb{Z}</m> représente l'allemand <em>Zahlen</em> signifiant les nombres. Notez que <m>\mathbb{Z}</m> est fermé pour l'addition, la soustraction et la multiplication, mais pas pour la division.
+</p>
+
+<p>
+Les <alert>nombres rationnels</alert> sont tous les nombres qui peuvent être écrits comme le rapport de deux entiers. Autrement dit, tout nombre rationnel <m>r</m> peut être écrit sous la forme <m>p/q</m> où <m>p</m> et <m>q</m> sont des entiers. Nous désignons cet ensemble par <m>\mathbb{Q}</m> représentant <em>quoziente</em> qui est l'italien pour quotient ou ratio. Maintenant, nous avons enfin un ensemble de nombres qui est fermé par addition, soustraction, multiplication et division (bien sûr, vous devez toujours faire attention à ne pas diviser par zéro).
+</p>
+
+<p>
+Les <alert>nombres réels</alert> sont tous les nombres qui peuvent être écrits sous forme d'expansions décimales et nous les notons par <m>\mathbb{R}</m>. C'est au-delà de la portée de ce texte d'entrer dans les détails de la façon de donner une définition précise des nombres réels, et la notion qu'un nombre réel peut être écrit comme une expansion décimale sera suffisante.
+</p>
+
+</subsection>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+  CLP-1  0.3 Other Important Sets 
+-->
+<subsection xml:id="notation-dintervalle">
+<title>Notation d'intervalle</title>
+
+<p>
+Nous avons vu quelques ensembles importants ci-dessus, à savoir <m>\mathbb{N}, \mathbb{Z}, \mathbb{Q}</m> et <m>\mathbb{R}</m>. Cependant, l'ensemble le plus important en mathématiques est sans doute l'ensemble vide.
+</p>
+<definition xml:id="def_0_3_1"><title>Ensemble vide</title>
+<statement><p>
+L'<em>ensemble vide</em> est l'ensemble qui ne contient aucun élément. Il est noté <m>\varnothing</m> ou \{ \}. Pour tout élément <m>x</m>, nous avons toujours <m>x \notin \varnothing</m>.
+</p></statement>
+</definition>
+
+<p>
+Notez qu'il est important de réaliser que l'ensemble vide n'est pas <em>rien</em>, considérez-le comme un sac vide. Notez également qu'avec un peu de travail acharné, vous pouvez réellement définir les nombres naturels en termes d'ensemble vide. Cela est très formel et dépasse largement le cadre de ce texte.
+</p>
+
+<p>
+Lorsqu'un ensemble ne contient pas trop d'éléments, il est bon de le définir en énumérant ses éléments. Mais pour les ensembles infinis ou même simplement les grands ensembles, nous ne pouvons pas faire cela et nous devons plutôt donner la règle de définition. Par exemple, l'ensemble de tous les nombres carrés parfaits se représente de la façon suivante:
+<me>
+  S = \{x \telque x = k^2 \text{ où } k \in \mathbb{Z} \}
+</me>
+Notez que nous avons utilisé un autre raccourci ici, à savoir <m>\telque</m>, qui signifie <q>tel que</q> ou <q>ainsi que</q>. Nous lisons la déclaration ci-dessus comme <q><m>S</m> est l'ensemble des éléments <m>x</m> tels que <m>x</m> est égal à <m>k</m> au carré, où <m>k</m> est un entier</q>. C'est la manière standard d'écrire un ensemble défini par une règle.
+</p>
+
+<example xml:id="eg_0_3_1"><title>exemples d'ensembles</title>
+<p>
+Encore plus d'exemples<ellipsis/>
+<ul>
+  <li>
+  Soit <m>A = \{2,3,5,7,11,13,17,19\}</m> et soit
+  <me>
+    B = \{ a \in A \telque a \lt 8\} = \{2,3,5,7\}
+  </me>
+  l'ensemble des éléments de <m>A</m> étant strictement inférieur à 8.
+  </li>
+  <li>
+  Entiers pairs et impairs
+  <md>
+  <mrow>
+  P &amp;= \{ n \telque n \mbox{ est un entier pair} \}
+  </mrow><mrow>
+  &amp;= \{n \telque n = 2k \mbox{ pour un $k \in \mathbb{Z}$ } \}
+  </mrow><mrow>
+  &amp;= \{2n \telque n \in \mathbb{Z}\},
+  </mrow>
+  </md>
+  et similairement
+  <md>
+  <mrow>
+    I &amp;= \{ n \telque n \mbox{ est un entier impair} \}
+  </mrow><mrow>
+    &amp;= \{2n+1 \telque n \in \mathbb{Z}\}.
+  </mrow>
+  </md>
+  </li>
+  <li>Entiers carrés
+  <me>
+    S = \{n^2 \telque n \in \mathbb{Z}\}.
+  </me>
+  </li>
+</ul>
+</p>
+</example>
+
+
+<p>
+Les ensembles <m>A</m> et <m>B</m> dans l'exemple ci-dessus illustrent un point important. Chaque élément de <m>B</m> est un élément de <m>A</m>, et nous disons donc que <m>B</m> est un sous-ensemble de <m>A</m>.
+</p>
+
+<definition xml:id="def_0_3_2">
+<statement><p>
+Soit <m>A</m> et <m>B</m> des ensembles. On dit que <m>A</m> est un sous-ensemble de <m>B</m> si chaque élément de <m>A</m> est aussi un élément de <m>B</m>. On note ceci <m>A \subseteq B</m> (ou <m>B \supseteq A</m>). Si <m>A</m> est un sous-ensemble de <m>B</m> et <m>A</m> et <m>B</m> ne sont pas identiques, de sorte qu'il existe au moins un élément de <m>B</m> qui n'est pas dans <m>A</m> alors on dit que <m>A</m> est un sous-ensemble propre de <m>B</m>. Nous notons cela par <m>A \subset B</m> (ou <m>B \supset A</m>).
+</p></statement>
+</definition>
+
+
+<p>
+Deux choses à noter à propos des sous-ensembles :
+<ul>
+  <li>
+  Soit <m>A</m> un ensemble. C'est toujours le cas que <m>\varnothing \subseteq A</m>.
+  </li>
+
+  <li>
+  Si <m>A</m> n'est pas un sous-ensemble de <m>B</m>, alors on écrit <m>A \not\subseteq B</m>. Cela revient à dire qu'il y a un élément de <m>A</m> qui n'est pas dans <m>B</m>. C'est-à-dire qu'il existe un élément <m>a \in A</m> tel que <m>a \notin B</m>.
+  </li>
+</ul>
+</p>
+
+<example xml:id="eg_0_3_2"><title>sous-ensembles</title>
+<p>
+Soit <m>S = \{1, 2\}</m>. Quels sont tous les sous-ensembles de <m>S</m> ? Eh bien, chaque élément de <m>S</m> peut être dans le sous-ensemble ou non, indépendamment des autres éléments de l'ensemble. Nous avons donc <m>2 \times 2 = 4</m> possibilités: ni <m>1</m> ni <m>2</m> n'est dans le sous-ensemble, <m>1</m> est mais <m>2</m> n'est pas, <m>2</m> l'est mais <m>1</m> ne l'est pas, et <m>1</m> et <m>2</m> > sont. C'est-à-dire
+<me>
+  \varnothing, \{1\}, \{2\}, \{1,2\} \subseteq S
+</me>
+Cet argument peut être généralisé avec un peu de travail pour montrer qu'un ensemble qui contient exactement <m>n</m> éléments a exactement <m>2^n</m> sous-ensembles.
+</p>
+</example>
+
+<p>
+Dans une grande partie de notre travail avec les fonctions plus loin dans le texte, nous devrons travailler avec des sous-ensembles de nombres réels, en particulier des segments de la <q>droite réelle</q>. Une manière pratique et standard de représenter de tels sous-ensembles consiste à utiliser la notation d'intervalle.
+</p>
+
+<definition xml:id="def_intervals">
+<title>Intervalles ouverts et fermés de <m>\mathbb{R}</m></title>
+<statement><p>
+Soit <m>a, b \in \mathbb{R}</m> tel que <m>a \lt b</m>. Nous nommons le sous-ensemble de tous les nombres entre <m>a</m> et <m>b</m> de différentes manières selon que les extrémités de l'intervalle (<m>a</m> et <m >b</m>) sont des éléments du sous-ensemble.
+<ul>
+  <li>
+  L'intervalle fermé <m>[a,b] = \{x \in \mathbb{R} \telque a \leq x \leq b\}</m> incluant les deux extrémités.
+  </li>
+
+  <li>
+  L'intervalle ouvert <m>]a,b[ = \{x \in \mathbb{R} \telque a \lt x \lt b\}</m> n'incluant par les deux extrémités.
+  </li>
+</ul>
+</p>
+
+<p>
+Nous définissons également des intervalles semi-ouverts qui contiennent une extrémité mais pas l'autre:
+<md>
+<mrow>
+  ]a, b] &amp;= \{ x \in \mathbb{R} \telque a \lt x \leq b\}
+  &amp; [a,b[)] &amp;= \{ x \in \mathbb{R} \telque a \leq x  \lt  b\}
+  </mrow>
+</md>
+Nous avons parfois aussi besoin d'intervalles non bornés
+<md>
+<mrow>
+  [a, \infty[ &amp;= \{ x \in \mathbb{R} \telque a \leq x \}
+  &amp; ]a, \infty[ &amp;= \{ x \in \mathbb{R} \telque a  \lt  x \}
+</mrow><mrow>
+  ]-\infty, b] &amp;= \{ x \in \mathbb{R} \telque x \leq b \}
+  &amp; ]-\infty, b[ &amp;= \{ x \in \mathbb{R} \telque x  \lt  b \}
+  </mrow>
+</md>
+</p></statement>
+</definition>
+
+<p>
+En savoir plus sur les ensembles
+</p>
+
+<p>
+Nous savons donc maintenant comment dire qu'un ensemble est contenu dans un autre. Nous allons maintenant définir quelques autres opérations sur les ensembles. Commençons aussi à être un peu plus précis avec nos définitions et exposons-les soigneusement au fur et à mesure que nous approfondissons le texte.
+</p>
+
+<definition xml:id="def_0_3_3">
+<statement><p>
+Soit <m>A</m> et <m>B</m> des ensembles. Nous définissons l'union de <m>A</m> et <m>B</m>, notée <m>A \cup B</m>, comme étant l'ensemble de tous les éléments qui sont dans au moins un des ensembles <m>A</m> et <m>B</m>.
+<me>
+A \cup B = \{x \telque x\in A \text{ ou } x \in B \}
+</me>
+</p></statement>
+</definition>
+
+<p>
+Il est important de réaliser que nous utilisons le mot <q>ou</q> dans un sens mathématique précis. Nous voulons dire que <m>x</m> appartient à <m>A</m> ou <m>x</m> appartient à <m>B</m> <em>ou les deux</em>. Alors que dans le langage parlé, <q>ou</q> est souvent utilisé pour être <q>exclusif</q> <mdash/> <m>A</m> ou <m>B</m> mais pas les deux.
+</p>
+
+<p>
+Nous commençons également la définition en annonçant <q>Définition</q> afin que le lecteur sache <q>Nous sommes sur le point de définir quelque chose d'important</q>. Nous devons également nous assurer que tout est (raisonnablement) défini : par exemple, nous ne supposons pas que le lecteur sait déjà que <m>A</m> et <m>B</m> sont des ensembles.
+</p>
+
+<p>
+Il est essentiel que nous rendions nos définitions claires, sinon tout ce que nous ferons avec les définitions sera très difficile à suivre. En tant qu'auteurs, nous devons essayer d'être gentils avec nos lecteurs.
+</p>
+
+<definition xml:id="def_0_3_4">
+<statement><p>
+Soit <m>A</m> et <m>B</m> des ensembles. On définit l'intersection de <m>A</m> et <m>B</m>, notée <m>A \cap B</m>, comme étant l'ensemble des éléments qui appartiennent à la fois à <m>A</m> et <m>B</m>.
+<me>
+A \cap B = \{ x \telque x\in A \text{ et } x \in B \}
+</me>
+</p></statement>
+</definition>
+
+<example xml:id="eg_0_3_3"><title>Union et intersection</title>
+<p>
+Soit <m>A = \{1, 2, 3, 4\}</m>, <m>B = \{p \telque p \text{ est premier} \}</m>, <m>C = \{5, 7, 9\}</m> et <m>D = \{\text{nombres entiers positifs pairs}\}</m>. Alors
+<md>
+<mrow>
+  A \cap B &amp;= \{2, 3\}
+</mrow><mrow>
+  B \cap D &amp;= \{2\}
+</mrow><mrow>
+  A \cup C &amp;= \{1, 2, 3, 4, 5, 7, 9\}
+</mrow><mrow>
+  A \cap C &amp;= \varnothing
+</mrow>
+</md>
+Dans ce dernier cas on voit que les deux ensembles n'ont aucun élément en commun. Dans ce cas, on dit qu'ils sont <alert>disjoints</alert>.
+</p>
+</example>
+
+</subsection>
+</section>

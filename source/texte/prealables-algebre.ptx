@@ -1,0 +1,381 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+"D:\Dropbox\A Sylvain Bérubé\A-4 Enseignement\Projets, activités\2021 RELCALC\PreTeXt\Relcalc-1-test\book"
+-->
+
+<section xml:id="algebre">
+  <title>Manipulations algébriques</title>
+  
+  <p>
+    ...
+  </p>
+
+
+
+
+
+
+
+<!--
+  RÉFÉRENCES
+  https://fr.wikipedia.org/wiki/Exposant_(math%C3%A9matiques)
+  https://www.alloprof.qc.ca/fr/eleves/bv/mathematiques/les-lois-des-exposants-m1044
+  Edouard-Montpetit 1.2
+  https://yoshiwarabooks.org/mfg/appendix-Laws-of-Exponents.html
+-->
+  <subsection xml:id="algebre-exposants">
+    <title>Lois des exposants</title>
+
+    <p>
+      L'opération puissance consiste à multiplier un élément <m>a</m> par lui-même plusieurs fois de suite. Le nombre de facteurs intervenant dans cette opération est noté en exposant de l'élément <m>a</m>. Pour cette raison, ce nombre de facteurs est appelé exposant de l'opération puissance, et ce nom remplace parfois le nom de l'opération elle-même.
+    </p>
+
+    <p>
+      Ainsi, si <m>n \in \mathbb{N}^{*}</m> et <m>a \in \mathbb{R}</m>, la <m>n^{\text{ième}}</m> puissance de <m>a</m> est
+      <me>
+        a^n = \underbrace{a \times \cdots \times a}_{n \text{ facteurs }},
+      </me>
+      qui est lu « <m>a</m> puissance <m>n</m> », « <m>a</m> exposant <m>n</m> » ou « <m>a</m> à la <m>n</m> ». Dans cette expression, le nombre <m>a</m> est appelé la base. Par convention, on a <m>a^0 = 1</m>. La <m>2^\text{e}</m> puissance de <m>a</m> est appelée le carré de <m>a</m> et la <m>3^\text{e}</m> puissance de <m>a</m> est appelée le cube de <m>a</m>.
+    </p>
+
+    <p>
+      Cette notion de puissance peut être étendue à des exposants entiers relatifs non nuls. Ainsi, si <m>n \in \mathbb{N}^{*}</m> et <m>a \in \mathbb{R}^{*}</m>, on a
+      <me>
+        a^{-n} = \frac{1}{a^n} = \frac{1}{\underbrace{a \times \cdots \times a}_{n \text{ facteurs }}}.
+      </me>
+    </p>
+
+    <p>
+      EXEMPLE
+    </p>
+
+    <p>
+      Le tableau présente les principales propriétés des exposants.
+    </p>
+
+    <p>
+      <table>
+        <title>Propriétés des exposants</title>
+
+        <tabular valign="top" halign="left">
+          <col />
+          <col />
+          <col width="80%"/>
+          <col />
+          
+          <row header="yes" bottom="minor">
+            <cell colspan="3">Propriétés</cell>
+            <cell>Exemple</cell>
+          </row>
+
+          <row>
+            <cell>1.</cell>
+            <cell><m>a^n a^m = a^{n+m}</m></cell>
+            <cell><p>​Produit de puissances de même base</p></cell>
+            <cell><m>
+              3^2 \cdot 3^4 \cdot 3^{-3} = 3^{2+4-3} = 3^3</m></cell>
+          </row>
+
+          <row>
+            <cell>2.</cell>
+            <cell><m>\frac{a^n}{a^m} = a^{n-m}</m> où <m>a \neq 0</m> </cell>
+            <cell><p>​Quotient de puissances de même base</p></cell>
+            <cell><m>\frac{6^5}{6^3} = 6^{5-3} = 6^2</m></cell>
+          </row>
+
+          <row>
+            <cell>3.</cell>
+            <cell><m>(ab)^n = a^n \cdot b^n</m></cell>
+            <cell><p>Puissance d'un produit</p></cell>
+            <cell><m>(7 \cdot 3)^4 = 7^4 \cdot 3^4</m></cell>
+          </row>
+
+          <row>
+            <cell>4.</cell>
+            <cell><m>(\frac{a}{b})^n = \frac{a^n}{b^n}</m> où <m>b \neq 0</m></cell>
+            <cell><p>Puissance d'un quotient</p></cell>
+            <cell><m>(\frac{2}{5})^3 = \frac{2^3}{5^3}</m></cell>
+          </row>
+
+          <row>
+            <cell>5.</cell>
+            <cell><m>(a^n)^m = a^{nm}</m></cell>
+            <cell><p>​Puissance d'une puissance</p></cell>
+            <cell><m>(6^2)^4 = 6^{2 \cdot 4} = 6^8</m></cell>
+          </row>
+        </tabular>
+      </table>
+    </p>
+
+    <p>
+      On note également que si deux puissances d'une même base sont égales, alors les exposants sont égaux. Autrement dit, si <m>a^m = a^n</m>, alors <m>m=n</m>. Par exemple, <m>3^{x+2} = 3^5</m>, ce qui implique que <m>x+2 = 5</m> et donc que <m>x=3</m>.
+    </p>
+
+    <p>
+      Par ailleurs, on doit faire attention aux fausses propriétés. Par exemple, <m>(a+b)^2 \neq a^2 + b^2</m>, et de façon générale, <m>(a+b)^n \neq a^n + b^n</m> lorsque <m>n > 1</m>.
+    </p>
+
+    <p>
+      EXEMPLES
+    </p>
+
+  </subsection>
+
+
+
+  <!--
+    https://www.alloprof.qc.ca/fr/eleves/bv/mathematiques/algebre-expressions-algebriques-m1068
+    https://www.alloprof.qc.ca/fr/eleves/bv/mathematiques/les-operations-sur-les-expressions-algebriques-m1071
+    exponentiation
+  -->
+
+  <subsection xml:id="algebre-polynomes-operations">
+    <title>Opérations sur les polynômes</title>
+
+    <p>
+      Une expression algébrique est formée d'une ou plusieurs lettres appelées variables ainsi que d'un ou plusieurs nombres appelés coefficients ou constantes. Lorsque ces expressions algébriques sont reliées par des opérations mathématiques, généralement par des symboles d'addition (+) et de soustraction (-), chaque expression est nommée terme. Les expressions algébriques peuvent être classées selon le nombre de termes qu'elles contiennent. De plus, on peut effectuer des opérations mathématiques sur les expressions algébriques. Il est aussi possible de les réduire en termes plus simples.
+    </p>
+
+    <p>
+      Les <em>monômes</em> sont des expressions algébriques contenant un seul et unique terme de la forme <m>ax^n</m>, où <m>a \in \mathbb{R}</m> et <m>n \in \mathbb{N}</m>. Les termes peuvent être constants ou algébriques. Par exemple, <m>23</m> est un monôme constant, tandis que <m>3x^2</m> est un monôme algébrique ayant <m>3</m> pour coefficient. Le degré d'un monôme correspond à l'exposant de sa variable. Ainsi, <m>3x^2</m> est de degré 2, tandis que <m>23 = 23x^0</m> est de degré 0.
+    </p>
+    <p>
+      Les polynômes sont des expressions algébriques contenant un ou plusieurs termes. Un polynôme est en fait la somme ou la différence algébrique de plusieurs monômes. Par exemple, <m>3x^3 + 2x + 1</m> est un polynôme. De façon générale, un <em>polynôme à une variable</em> de degré <m>n \in \mathbb{N}</m> est une expression de la forme
+      <me>
+        a_{n}x^{n} + a_{n-1}x^{n-1} + \cdots + a_{2}x^{2} + a_{1}x + a_0,
+      </me>
+      où <m>a_i \in \mathbb{R}</m> pour tout <m>i</m> et où <m>a_n \neq 0</m>. Ainsi, le degré d'un polynôme correspond au degré du monôme qui a le degré le plus élevé. À noter que les exposants des polynômes sont toujours des nombres naturels. Par ailleurs, un polynôme ayant 2 termes est appelé un <em>binôme</em> et un polynôme en ayant 3 est appelé un <em>trinôme</em>. Ainsi, <m>2x+3</m> est un binôme tandis que <m>x^4 + 2x^3 + x^2</m> est un trinôme.  
+    </p>
+
+    <p>
+      Il existe quelques conventions d'écriture pour les expressions algébriques.
+      <ol>
+        <li>
+          Dans un terme, le coefficient est toujours écrit devant les variables. Il est important de noter qu'un coefficient de 1 n'est toutefois pas écrit dans une expression.
+        </li>
+        <li>
+          Dans un polynôme, les termes sont disposés dans l'ordre décroissant de leur degré respectif.
+        </li>
+      </ol>
+    </p>
+
+    <p>
+      Les opérations mathématiques de base (addition, soustraction, multiplication, division) peuvent être appliquées aux expressions algébriques. On doit alors respecter certaines règles relatives à chaque opération. Dans le cas d'une expression algébrique qui fait intervenir plusieurs opérations, on doit respecter la priorité des opérations et les lois des exposants. Le résultat obtenu lors d'une de ces opérations sera sous forme d'expression algébrique. Toutefois, ce résultat devra être réduit à la plus petite expression équivalente possible. L'expression algébrique de départ et l'expression réduite seront alors équivalentes puisqu'elles ont la même valeur numérique. Pour ce faire, on fait intervenir la notion de terme semblable.
+    </p>
+
+    <p>
+      Pour additionner un polynôme à un autre, il faut additionner chacun des termes semblables du second polynôme à ceux du premier et réduire l'expression algébrique obtenue. On obtient alors un nouveau polynôme correspondant à la somme recherchée.
+    </p>
+
+    <p>
+      EXEMPLE
+    </p>
+
+    <p>
+      Pour soustraire un polynôme à un autre, on procède de façon similaire à l'addition, c'est-à-dire qu'il faut soustraire chacun des termes semblables du second polynôme à ceux du premier et réduire l'expression algébrique obtenue. On obtient alors un nouveau polynôme correspondant à la différence recherchée.
+    </p>
+
+    <p>
+      EXEMPLE
+    </p>
+
+    <p>
+      Pour multiplier deux polynômes, il faut appliquer la distributivité de la multiplication sur l’addition. Ainsi, il faut multiplier chacun des termes du premier polynôme par chacun des termes du second, puis on réduit l'expression obtenue, s'il y a lieu, en additionnant ou en soustrayant les termes semblables.
+    </p>
+
+    <p>
+      EXEMPLE
+    </p>
+
+    <p>
+      Pour diviser un polynôme par un monôme, on doit distribuer la division sur chacun des termes du polynôme puis appliquer les lois des exposants.
+    </p>
+
+    <p>
+      EXEMPLE
+    </p>
+
+    <p>
+      Pour diviser un polynôme (nommé dividende) par un autre polynôme (nommé diviseur), on peut effectuer une division euclédienne comme on le fait pour la division de nombres réels. Voici la procédure complète.
+      <ol>
+        <li><p>
+          Écrire les termes du dividende et du diviseur en ordre décroissant selon le degré de leurs termes.
+        </p></li>
+        <li><p>
+          Diviser les premiers termes du dividende et du diviseur ensemble.
+        </p></li>
+        <li><p>
+          Placer le résultat de cette division sous le diviseur.
+        </p></li>
+        <li><p>
+          Le multiplier avec tous les termes du diviseur.
+        </p></li>
+        <li><p>
+          Faire la différence entre le diviseur et la nouvelle expression algébrique obtenue.
+        </p></li>
+        <li><p>
+          Abaisser les termes restants du dividende à la même hauteur que le résultat de la soustraction.
+        </p></li>
+        <li><p>
+          Répéter les étapes 2) à 6) jusqu'à ce que le degré du dividende soit plus petit que celui du diviseur.
+        </p></li>
+        <li><p>
+          Au besoin, écrire le reste de façon adéquate.
+        </p></li>
+      </ol>
+    </p>
+
+    <p>
+      De façon générale, lorsqu'on divise le polynôme <m>P(x)</m> par le polynôme <m>D(x)</m>, on cherche deux polynômes <m>Q(x)</m> et <m>R(x)</m> tels que 
+      <me>
+        \frac{P(X)}{Q(x)} = R(x) + \frac{S(x)}{Q(x)}
+      </me>
+      et de sorte que le degré du polynôme <m>S(x)</m> soit inférieur à celui du polynôme <m>Q(x)</m>. Les polynômes <m>P(x)</m> et <m>Q(x)</m> sont appelés respectivement le dividende et le diviseur, tandis que les polynômes <m>Q(x)</m> et <m>R(x)</m> sont appelés respectivement le quotient et le reste.
+    </p>
+
+    <p>
+      EXEMPLE
+    </p>
+
+    
+
+
+  </subsection>
+
+
+
+
+  <subsection xml:id="algebre-fractions-rationnelles-simplification">
+    <title>Simplification de fractions rationnelles</title>
+
+    <p>
+      Une fraction rationnelle est une division de polynômes, c'est-à-dire une expression de la forme
+      <m>
+        \frac{P(x)}{Q(x)}
+      </m>
+      où <m>P(x)</m> et <m>Q(x)</m> sont des polynômes, avec <m>Q(x) \neq 0</m>.
+    </p>
+
+    <p>
+      Avant d’effectuer diverses opérations sur des fractions rationnelles, il peut être utile de simplifier la fraction rationnelle. Simplifier une fraction rationnelle, c'est rechercher des facteurs communs au numérateur et au dénominateur afin de les simplifier. Pour ce faire, on suit la démarche suivante :
+      <ol>
+        <li><p>
+          Factoriser les polynômes au numérateur et au dénominateur.
+        </p></li>
+        <li><p>
+          Établir les restrictions.
+        </p></li>
+        <li><p>
+          Simplifier les facteurs communs aux deux polynômes.
+        </p></li>
+      </ol>
+    </p>
+
+    <p>
+      La maîtrise des différentes techniques de factorisation (voir section 1.4) est un élément clé pour réussir à simplifier des fractions rationnelles.  Attention! Puisqu'il est impossible de diviser par 0, il faut poser des restrictions dans une fraction rationnelle afin que le dénominateur ne soit pas égal à 0. Ces restrictions doivent être posées avant de simplifier l'expression rationnelle. Il faut donc identifier les valeurs possibles que peuvent prendre les variables du polynôme du dénominateur pour que ce polynôme nous donne une valeur 0.
+    </p>
+
+    <p>
+      Exemple
+    </p>
+
+  </subsection>
+
+
+
+
+  <subsection xml:id="algebre-fractions-rationnelles-operations">
+    <title>Opérations sur les fractions rationnelles</title>
+
+    <p>
+      Les opérations sur les fractions rationnelles sont similaires à celles sur les fractions.
+    </p>
+    
+    <p>
+      La méthode de multiplication de fractions est plutôt simple. On doit multiplier les numérateurs ensemble et les dénominateurs ensemble. On obtient ainsi une nouvelle fraction qui correspond au produit final.
+      <me>
+        \frac{3}{7} \cdot \frac{2}{9} = \frac{3 \cdot 2}{7 \cdot 9} = \frac{6}{63} = \frac{2}{21}.
+      </me>
+    </p>
+
+    <p>
+      Pour muliplier des fractions rationnelles, on doit également multiplier les numérateurs et les dénominateurs ensemble. On obtient ainsi une nouvelle fraction rationnelle qui correspond au produit final.
+      <me>
+        \frac{P(x)}{Q(x)} \cdot \frac{R(x)}{S(x)}
+        = \frac{P(x) \cdot R(x)}{Q(x) \cdot S(x)}
+      </me>
+    </p>
+
+    <p>
+      Afin de résoudre une division de deux fractions, il est important de se souvenir que faire une division revient à faire une multiplication par l'inverse. On va alors inverser le numérateur et le dénominateur de la fraction de droite puis on change le signe de division contre un signe de multiplication.
+      <me>
+        \frac{3}{7} \div \frac{2}{9} = \frac{3}{7} \cdot \frac{9}{2} = \frac{3 \cdot 9}{7 \cdot 2} = \frac{27}{14}.
+      </me>
+    </p>
+    <p>
+      Pour diviser des fractions rationnelles, on doit également transformer la division en multiplication puis effectuer la multiplication des fractions rationnelles. On obtient ainsi une nouvelle fraction rationnelle qui correspond au quotient final.
+      <me>
+        \frac{P(x)}{Q(x)} \div \frac{R(x)}{S(x)}
+         = \frac{P(x)}{Q(x)} \cdot \frac{S(x)}{R(x)}
+         = \frac{P(x) \cdot S(x)}{Q(x) \cdot R(x)}
+      </me>
+    </p>
+
+    <p>
+      Exemple
+    </p>
+
+    <p>
+      Avant d'être en mesure d'effectuer l'addition ou la soustraction de deux fractions, il faut leur trouver un dénominateur commun. Une fois qu'on est capable de trouver des fractions équivalentes et de trouver des dénominateurs communs, on peut opérer l'addition ou la soustraction sur les fractions.
+      <me>
+        \frac{3}{7} + \frac{2}{9}
+         = \frac{3 \cdot 9}{7\cdot 9} + \frac{2 \cdot 7}{9 \cdot 7}
+         = \frac{21}{63} + \frac{14}{63}
+         = \frac{21 + 14}{63}
+         = \frac{35}{63}.
+      </me>
+    </p>
+
+    <p>
+      Pour additionner ou soustraire des fractions rationnelles, il faut également trouver un dénominateur commun.
+      <me>
+        \frac{P(x)}{Q(x)} + \frac{R(x)}{S(x)}
+         = \frac{P(x)S(x)}{Q(x)S(x)} + \frac{R(x)Q(x)}{S(x)Q(x)}
+         = \frac{P(x)S(x) + Q(x)R(x)}{Q(x)S(x)}
+      </me>
+      <me>
+        \frac{P(x)}{Q(x)} - \frac{R(x)}{S(x)}
+         = \frac{P(x)S(x)}{Q(x)S(x)} - \frac{R(x)Q(x)}{S(x)Q(x)}
+         = \frac{P(x)S(x) - Q(x)R(x)}{Q(x)S(x)}
+      </me>
+    </p>
+
+    <p>
+      Exemple
+    </p>
+
+    Après avoir effectuer diverses opérations sur des fractions rationnelles, on cherche à simplifier la fraction rationnelle obtenue au maximum.
+
+    <p>
+      Exemple
+    </p>
+
+  </subsection>
+
+
+
+
+  <subsection xml:id="algebre-equations-resolution">
+    <title>Résolution d'équations</title>
+
+    <p>
+      ...
+    </p>
+
+  </subsection>
+
+
+
+
+
+</section>

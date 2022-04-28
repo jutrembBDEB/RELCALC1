@@ -1,0 +1,4 @@
+file:/c:/GitHub/RELCALC1/source/main.ptx:10:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element include there
+file:/c:/GitHub/RELCALC1/source/main.ptx:22:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element idx, got introduction
+file:/c:/GitHub/RELCALC1/source/main.ptx:22:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element introduction there
+file:/c:/GitHub/RELCALC1/source/main.ptx:19:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element book failed to validate content

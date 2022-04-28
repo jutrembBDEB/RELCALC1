@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<chapter xml:id="prealables" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Préalables</title>
+  <introduction>
+    <p>
+    Dans ce chapitre, nous présentons plusieurs notions mathématiques préalables nécessaires à l’étude du calcul différentiel. La bonne maîtrise de ces notions facilitera l'apprentissage des nouveaux concepts.
+    </p>
+  </introduction>
+
+  <xi:include href="prealables-ensembles.ptx" />
+  <xi:include href="prealables-algebre.ptx" />
+
+</chapter>

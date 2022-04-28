@@ -1,0 +1,779 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+"D:\Dropbox\A Sylvain Bérubé\A-4 Enseignement\Projets, activités\2021 RELCALC\PreTeXt\Relcalc-1-test\book"
+-->
+
+<section xml:id="ensembles">
+  <title>Les ensembles</title>
+  
+  <p>
+    Le terme ensemble est intuitivement compris comme désignant une collection d'objets. Par exemple, l'ensemble des couleurs primaires en peinture est {rouge, jaune, bleu} et il comprend 3 objets, à savoir les couleurs rouge, jaune et bleu. En mathématiques, ce concept fondamental d'ensemble est le point de départ sur lequel on peut construire des idées plus complexes, et c'est la raison pour laquelle notre étude du calcul différentiel s'amorce sur leur présentation.
+  </p>
+
+
+
+
+
+
+
+
+  <subsection xml:id="ensembles-notation-oprations">
+    <title>Notation et opérations ensemblistes</title>
+
+    <p>
+      Un <em>ensemble</em> est un regroupement d'objets distincts. Les objets sont appelés <em>éléments</em> de l'ensemble.
+    </p>
+
+    <p>
+      Pour dénoter des ensembles, la convention mathématiques est d'utiliser des lettres majuscules, par exemple <m>A, B, C, X, Y</m>. Et pour représenter les éléments d'un ensemble, on utilise plutôt des lettres minuscules, par exemple <m>a, b, c, x, y</m>.
+    </p>
+
+    <p>
+      Un ensemble peut être <em>défini en extension</em>, c’est-à-dire en énumérant les éléments qu’il contient. Pour se faire, on place les éléments entre accolades et les séparés par des virgules. Par exemple, pour définir en extension l'ensemble des diviseurs du nombre 12, on écrit <me>A = \{1, 2, 3, 4, 6, 12\}</me>. Cet énoncé mathématique se lit de la façon suivante : « <m>A</m> est l'ensemble contenant les éléments 1, 2, 3, 4, 6, 12 ».
+    </p>
+
+    <p>
+      Un ensemble peut également être <em>défini en compréhension</em>, c’est-à-dire en décrivant les caractéristiques des éléments qu’il contient. Ceci est utile lorsqu'un ensemble contient un grand nombre d'éléments, voire une infinité. Pour se faire, on utilise la notation d'un ensemble en compréhension. Par exemple, pour définir en compréhension l'ensemble contenant les entiers 3, 4, 5, 6 et 7, on peut écrire <me>B = \{x \telque x \text{ est un entier supérieur à 2 et inférieur à 8}\}</me>. La barre verticale « <m>\telque</m> » est un symbole signifiant « tel que », donc l'énoncé mathématique se lit comme suit : « <m>B</m> est l'ensemble contenant tous les éléments <m>x</m> tels que <m>x</m> est un entier supérieur à 2 et inférieur à 8 ». À noter que cet ensemble se décrit en extension de la façon suivante : <m>B = \{3, 4, 5, 6, 7\}</m>.
+    </p>
+
+    <example xml:id="ens_ext_comp">
+      <statement>
+        <p>
+          Décrivez en extension et en compréhension l'ensemble <m>A</m> contenant tous les nombres pairs entre 1 et 11.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          En extension : <m>A = \{2,4,6,8,10\}</m>.
+        </p>
+        <p>
+          En compréhension : <m>A = \{x \telque x \text{ est un nombre pair entre $1$ et $11$}\}</m>.
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      Ce qui est en jeu au premier chef dans la notion d'ensemble, c'est la <em>relation d’appartenance</em>, laquelle établit si un élément fait partie d'un ensemble. Pour indiquer que l'élément <m>x</m> appartient à l'ensemble <m>A</m>, on écrit <m>x \in A</m>. Cet énoncé peut se lire de différentes façons : « <m>x</m> appartient à <m>A</m> », « <m>x</m> est élément de <m>A</m> », « <m>x</m> est dans <m>A</m> », « <m>A</m> a pour élément <m>a</m> », « <m>A</m> possède <m>x</m> ». Par exemple, <m>3 \in \{1,2,3,4,5\}</m>.
+    </p>
+
+    <p>
+      Comme souvent pour les relations, on barre le symbole <m>\in</m> pour indiquer sa négation, à savoir la non-appartenance d’un élément à un ensemble. Ainsi, pour indiquer que l'élément <m>x</m> n'appartient pas à l'ensemble <m>A</m>, on écrit <m>x \notin A</m>. Par exemple, <m>7 \notin \{1,2,3,4,5\}</m>.
+    </p>
+
+    <p>
+      Lorsque tous les éléments d'un ensemble <m>A</m> sont aussi éléments d'un ensemble <m>B</m>, on dit alors que l'ensemble <m>A</m> est un <em>sous-ensemble</em> de l'ensemble <m>B</m> ou encore que l'ensemble <m>A</m> est une partie de l'ensemble <m>B</m>. On note ceci <m>A \subseteq B</m>. Par ailleurs, si l'ensemble <m>C</m> n'est pas un sous-ensemble de l'ensemble <m>D</m>, alors on écrit <m>C \not\subseteq D</m>. Cela revient à dire qu'il y a un élément de <m>C</m> qui n'est pas dans <m>D</m>, c'est-à-dire qu'il existe un élément <m>c \in C</m> tel que <m>c \notin D</m>. De plus, si les ensembles <m>E</m> et <m>F</m> contiennent les mêmes éléments, alors on dit que ces deux ensembles sont <em>égaux</em>, ce que l'on note <m>E = F</m>.
+    </p>
+
+    <p>
+      Un ensemble important en mathématiques est l'ensemble vide. L'<em>ensemble vide</em> est l'ensemble qui ne contient aucun élément. Il est noté <m>\varnothing</m> ou <m>\{ \}</m>. Pour tout élément <m>x</m>, nous avons toujours <m>x \notin \varnothing</m>. Et pour tout ensemble <m>A</m>, on a <m>\varnothing \in A</m>.
+    </p>
+
+    <example xml:id="ex_ens_notation">
+      <statement>
+        <p>
+          Soit <m>A = \{1,2,3,4,5,6\}</m>,
+          <m>B = \{2,4,6\}</m>, <m>C = \{1,2,3\}</m> et <m>D = \{7,8,9\}</m>.
+          Déterminez lesquelles des propositions suivantes sont vraies, fausses ou dénuées de sens.
+        </p>
+
+        <p>
+          <ol cols="3">
+            <li><m>A \subset B</m>.</li>
+            <li><m>B \subset A</m>.</li>
+            <li><m>B \in C</m>.</li>
+            <li><m>\emptyset \in A</m>.</li>
+            <li><m>\emptyset \subset A</m>.</li>
+            <li><m>A \lt D</m>.</li>
+            <li><m>3 \in C</m>.</li>
+            <li><m>3 \subset C</m>.</li>
+            <li><m>\{3\} \subset C</m>.</li>
+          </ol>
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          <ol>
+            <li><p>
+              Faux.
+              Par exemple, <m>1\in A</m> mais <m>1 \notin B</m>.
+            </p></li>
+
+            <li><p>
+              Vrai.
+              Tout élément de <m>B</m> est un élément de <m>A</m>.
+            </p></li>
+
+            <li><p>
+              Faux.
+              Les éléments de <m>C</m> sont 1, 2, 3.
+              L'ensemble <m>B</m> n'est pas égal à 1, 2 ou 3.
+            </p></li>
+
+            <li><p>
+              Faux. Aucun des 6 éléments de <m>A</m> n'est l'ensemble vide.
+            </p></li>
+
+            <li><p>
+              Vrai. Notez que l'ensemble vide est un sous-ensemble de chaque ensemble.
+            </p></li>
+
+            <li><p>
+              Dénué de sens. Un ensemble ne peut pas être inférieur à un autre ensemble.
+            </p></li>
+
+            <li><p>
+              Vrai. <m>3</m> est un des éléments de l'ensemble <m>C</m>.
+            </p></li>
+
+            <li><p>
+              Dénué de sens. <m>3</m> n'est pas un ensemble, alors il ne peut pas un sous-ensemble d'un autre ensemble.
+            </p></li>
+
+            <li><p>
+              Vrai. <m>3</m> est le seul élément de l'ensemble <m>\{3\}</m>, et il est un élément de <m>C</m>, donc tout élément de <m>\{3\}</m> est un élément de <m>C</m>.
+            </p></li>
+          </ol>
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      On va maintenant définir quelques opérations utiles sur les ensembles.
+    </p>
+
+    <p>
+      L'<em>union</em> de deux ensembles <m>A</m> et <m>B</m>, notée <m>A \cup B</m> (lire « <m>A</m> union <m>B</m> »), est l'ensemble des éléments appartenant à <m>A</m> ou à <m>B</m> (ou aux deux). Formellement,
+      <me>
+      A \cup B = \{x \telque x\in A \text{ ou } x \in B \}.
+      </me>
+    </p>
+
+    <p>
+      L'<em>intersection</em> de deux ensembles <m>A</m> et <m>B</m>, notée <m>A \cap B</m> (lire « <m>A</m> inter <m>B</m> »), est l'ensemble des éléments appartenant à <m>A</m> et à <m>B</m>. Formellement,
+      <me>
+      A \cap B = \{x \telque x\in A \text{ et } x \in B \}.
+      </me>
+    </p>
+
+    <p>
+      La <em>différence</em> de deux ensembles <m>A</m> et <m>B</m>, notée <m>A \setminus B</m> (lire « <m>A</m> moins <m>B</m> »), est l'ensemble des éléments appartenant à <m>A</m> mais n'appartenant pas à <m>B</m>. Formellement,
+      <me>
+      A \setminus B = \{x \telque x\in A \text{ et } x \notin B \}.
+      </me>
+    </p>
+
+    <example xml:id="exemple_ensemble_operations">
+      <statement>
+        <p>
+          Soit <m>A = \{1,2,3,4,5\}</m>, <m>B = \{3,4,5,6,7\}</m> et <m>C = \{7,8,9\}</m>. Déterminez les ensembles suivants.
+        </p>
+        <p>
+          <ol cols="3">
+            <li><p>
+              <m>A \cap B</m>.
+            </p></li>
+            
+            <li><p>
+              <m>A \cap C</m>.
+            </p></li>
+            
+            <li><p>
+              <m>A \cup B</m>.
+            </p></li>
+
+            <li><p>
+              <m>A \cup C</m>.
+            </p></li>
+
+            <li><p>
+              <m>A \setminus B</m>.
+            </p></li>
+
+            <li><p>
+              <m>B \setminus A</m>.
+            </p></li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p> 
+          <ol>
+            <li><p>
+              <m>A \cap B = \{3,4,5\}</m>.
+            </p></li>
+
+            <li><p>
+              <m>A \cap C = \varnothing</m>.
+            </p></li>
+
+            <li><p>
+              <m>A \cup B = \{1,2,3,4,5,6,7\}</m>.
+            </p></li>
+
+            <li><p>
+              <m>A \cup C = \{1,2,3,4,5,6,7,8,9\}</m>.
+            </p></li>
+
+            <li><p>
+              <m>A \setminus B = \{1,2\}</m>.
+            </p></li>
+
+            <li><p>
+              <m>B \setminus A = \{6,7\}</m>.
+            </p></li>
+          </ol>
+        </p>
+      </solution>
+    </example>
+
+  </subsection>
+
+
+
+
+
+
+
+
+  <subsection xml:id="ensembles-de-nombres">
+    <title>Ensembles de nombres</title>
+
+    <p>
+      En fonction de leurs caractéristiques, les nombres sont classés en différents ensembles, appelés <em>ensembles de nombres</em>. Les principaux ensembles de nombres sont les suivants:
+      <ul>
+        <li><p>
+          <m>\mathbb{N} = \{0,1,2,3,\ldots\}</m> désigne l'ensemble des <em>entiers naturels</em>.
+        </p></li>
+        <li><p>
+          <m>\mathbb{Z} = \{\ldots,-2,-1,0,1,2,\ldots\}</m> désigne l'ensemble des <em>entiers</em>, également appelés entiers relatifs.
+        </p></li>
+        <li><p>
+          <m>\mathbb{Q} = \{\frac{a}{b} \telque a, b \in \mathbb{Z} \text{ et } b \neq 0\}</m> désigne l'ensemble des <em>rationnels</em>. La représentation décimale des rationnels est finie ou périodique.
+        </p></li>
+        <li><p>
+          <m>\mathbb{Q}'</m> désigne l'ensemble des <em>irrationnels</em>, c'est-à-dire l'ensemble des nombres ne pouvant pas s'écrire sous forme de fraction de nombres entiers. La représentation décimale des irrationnels est infinie non périodique.
+        </p></li>
+        <li><p>
+          <m>\mathbb{R} = \mathbb{Q} \cup \mathbb{Q}'</m> désigne l'ensemble des <em>réels</em>.
+        </p></li>
+      </ul>
+    </p>
+
+    <p>
+      On remarque que
+      <me>
+        \mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R}.
+      </me>
+    </p>
+
+    <p>
+      On peut adjoindre ces ensembles des symboles <m>+</m> et <m>-</m>, placés en exposant, pour signifier qu’on considère les valeurs
+    positives ou négatives respectivement. De son côté, le symbole <m>*</m> signifie qu’on retire le 0 de l'ensemble.
+    </p>
+
+    <p>
+      <table>
+        <title>Ensemble de nombres</title>
+
+        <tabular>
+          <row header="yes" bottom="minor" >
+            <cell>Notation</cell>
+            <cell>Nom de l'ensemble</cell>
+            <cell>Représentation</cell>
+          </row>
+
+          <row>
+            <cell><m>\mathbb{N}</m></cell>
+            <cell>Entiers naturels</cell>
+            <cell><m>\mathbb{N} = \{0,1,2,3,\ldots\}</m></cell>
+          </row>
+
+          <row>
+            <cell><m>\mathbb{N}^{*}</m></cell>
+            <cell>Entiers naturels non nuls</cell>
+            <cell><m>\mathbb{N} = \mathbb{N} \setminus \{0\} = \{1,2,3,\ldots\}</m></cell>
+          </row>
+
+          <row>
+            <cell><m>\mathbb{Z}</m></cell>
+            <cell>Entiers</cell>
+            <cell><m>\mathbb{Z} = \{\ldots,-2,-1,0,1,2,\ldots\}</m></cell>
+          </row>
+
+          <row>
+            <cell><m>\mathbb{Z}^{+}</m></cell>
+            <cell>Entiers positifs</cell>
+            <cell><m>\mathbb{Z}^{+} = \mathbb{N} = \{0,1,2,3,\ldots\}</m></cell>
+          </row>
+
+          <row>
+            <cell><m>\mathbb{Z}^{-}</m></cell>
+            <cell>Entiers négatifs</cell>
+            <cell><m>\mathbb{Z}^{-} = \mathbb{Z} \setminus \mathbb{N}^{*} = \{\ldots,-3,-2,-1,0\}</m></cell>
+          </row>
+
+          <row>
+            <cell><m>\mathbb{Z}^{*}</m></cell>
+            <cell>Entiers non nuls</cell>
+            <cell><m>\mathbb{Z}^{*} = \mathbb{Z} \setminus \{0\} = \{\ldots,-2,-1,1,2,\ldots\}</m></cell>
+          </row>
+
+          <row>
+            <cell><m>\mathbb{Q}</m></cell>
+            <cell>Rationnels</cell>
+            <cell><m>\mathbb{Q} = \{\frac{a}{b} \telque a \in \mathbb{Z} \text{ et } b \in \mathbb{Z}^{*}\}</m></cell>
+          </row>
+
+          <row>
+            <cell><m>\mathbb{Q}'</m></cell>
+            <cell>Irrationnels</cell>
+            <cell></cell>
+          </row>
+
+          <row>
+            <cell><m>\mathbb{R}</m></cell>
+            <cell>Réels</cell>
+            <cell><m>\mathbb{R} = \mathbb{Q} \cup \mathbb{Q}'</m></cell>
+          </row>
+
+          <row>
+            <cell><m>\mathbb{R}^{+}</m></cell>
+            <cell>Réels positifs</cell>
+            <cell><m>\mathbb{R}^{+} = \{x \in \mathbb{R} \telque x \geqslant 0\}</m></cell>
+          </row>
+
+          <row>
+            <cell><m>\mathbb{R}^{-}</m></cell>
+            <cell>Réels négatifs</cell>
+            <cell><m>\mathbb{R}^{-} = \{x \in \mathbb{R} \telque x \leqslant 0\}</m></cell>
+          </row>
+
+          <row>
+            <cell><m>\mathbb{R}^{*}</m></cell>
+            <cell>Réels non nuls</cell>
+            <cell><m>\mathbb{R}^{*} = \mathbb{R} \setminus \{0\}</m></cell>
+          </row>
+        </tabular>
+      </table>
+    </p>
+
+    <!--
+      EXEMPLE
+      Amyotte Exercices A.2  
+    -->
+    <p>
+      <example xml:id="exemple_ensemble_nombres">
+        <statement>
+          <p>
+            Pour chaque énoncé, dites s'il est vrai ou faux.
+          </p>
+          <p>
+            <ol cols="3">
+              <li><p>
+                <m>\mathbb{N} \cup \mathbb{Z}^{-} = \mathbb{Z}</m>.
+              </p></li>
+
+              <li><p>
+                <m>\mathbb{N} \cap \mathbb{Z}^{-} = \varnothing</m>.
+              </p></li>
+
+              <li><p>
+                <m>\mathbb{Q} \cap \mathbb{Q}' = \varnothing</m>.
+              </p></li>
+
+              <li><p>
+                <m>\mathbb{Q} \setminus \mathbb{Z} = \mathbb{Q}'</m>.
+              </p></li>
+
+              <li><p>
+                <m>\mathbb{R} \setminus \mathbb{Q}' = \mathbb{Q}</m>.
+              </p></li>
+
+              <li><p>
+                <m>\mathbb{Z} \cap \mathbb{N} = \mathbb{N}</m>.
+              </p></li>
+
+              <li><p>
+                <m>0 \in \mathbb{Z}^{-}</m>.
+              </p></li>
+
+              <li><p>
+                <m>\sqrt{2} \in \mathbb{N}</m>.
+              </p></li>
+
+              <li><p>
+                <m>\frac{8}{2} \in \mathbb{N}</m>.
+              </p></li>
+
+              <li><p>
+                <m>\frac{-25}{3} \in \mathbb{Z}^{-}</m>.
+              </p></li>
+
+              <li><p>
+                <m>\sqrt[\leftroot{-2}\uproot{2}4]{256} \in \mathbb{Q}'</m>.
+              </p></li>
+
+              <li><p>
+                <m>\sqrt{\frac{4}{9}} \in \mathbb{Q}</m>.
+              </p></li>
+            </ol>  
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <ol>
+              <li><p>
+                Vrai.
+              </p></li>
+
+              <li><p>
+                Faux car <m>\mathbb{N} \cap \mathbb{Z}^{-} = \{0\}</m>.
+              </p></li>
+
+              <li><p>
+                Vrai.
+              </p></li>
+
+              <li><p>
+                Faux, par exemple <m>\frac{1}{2} \in \mathbb{Q} \setminus \mathbb{Z}</m> mais <m> \frac{1}{2} \notin \mathbb{Q}'</m>.
+              </p></li>
+
+              <li><p>
+                Vrai.
+              </p></li>
+
+              <li><p>
+                Vrai.
+              </p></li>
+
+              <li><p>
+                Vrai.
+              </p></li>
+
+              <li><p>
+                Faux, <m>\sqrt{2}</m> est un irrationnel et non un entier naturel.
+              </p></li>
+
+              <li><p>
+                Vrai.
+              </p></li>
+
+              <li><p>
+                Faux, <m>\frac{-25}{3} \approx -8,333</m> n'est pas un entier relatif négatif.
+              </p></li>
+
+              <li><p>
+                Faux, <m>\sqrt[\leftroot{-2}\uproot{2}4]{256} = 4</m> est un rationnel et non un irrationnel.
+              </p></li>
+
+              <li><p>
+                Vrai.
+              </p></li>
+            </ol>
+          </p>
+        </solution>
+      </example>
+    </p>
+
+  </subsection>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <subsection xml:id="notation-dintervalle">
+    <title>Notation d'intervalle</title>
+
+    <p>
+    Souvent, on est emmené à travailler avec des sous-ensembles de nombres réels, en particulier des segments de la droite réelle. Une manière pratique et standard de représenter de tels sous-ensembles consiste à utiliser la notation d'intervalle.
+    </p>
+
+    <p>
+    Un <em>intervalle réel borné</em> est un ensemble de nombres réels délimité par deux nombres réels constituant une borne inférieure et une borne supérieure. Un intervalle contient tous les nombres réels compris entre ces deux bornes, les bornes pouvant être incluses ou non dans l'intervalle.
+    </p>
+    
+    <!--
+      IMAGE INTERVALLE s'inspirer de:
+      https://www.alloprof.qc.ca/fr/eleves/bv/mathematiques/la-representation-d-ensembles-de-nombres-m1359
+    -->
+    <p>
+    <table>
+      <title>Intervalles bornés</title>
+      <tabular>
+        <row header="yes" bottom="minor" >
+          <cell>Notation</cell>
+          <cell>En compréhension</cell>
+          <cell>Représentation visuelle</cell>
+        </row>
+        <row>
+          <cell><m>[a, b]</m></cell>
+          <cell><m>\{x \in \mathbb{R} \telque a \leqslant x \leqslant b\}</m></cell>
+          <cell>
+            <image>
+              <latex-image>
+                \begin{tikzpicture}
+                  \draw[-latex] (0,0) -- (2,0);
+                  \fill[black] (0.50,0) circle (0.05);
+                  \draw (0.50,0) node[below=-2pt] {\tiny{$a$\strut}};
+                  \fill[black] (1.40,0) circle (0.05);
+                  \draw (1.40,0) node[below=-2pt] {\tiny{$b$\strut}};
+                  \fill[fill=black, opacity=0.8](0.50,-0.02)--(0.50,0.02)--(1.40,0.02)--(1.40,-0.02)--(0.50,-0.02);
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+          </cell>
+        </row>
+        <row>
+          <cell><m>]a, b[</m></cell>
+          <cell><m>\{x \in \mathbb{R} \telque a \lt x \lt b\}</m></cell>
+          <cell>
+            <image>
+              <latex-image>
+                \begin{tikzpicture}
+                  \draw[-latex] (0,0) -- (2,0);
+                  \fill[fill=black, opacity=0.8](0.50,-0.02)--(0.50,0.02)--(1.40,0.02)--(1.40,-0.02)--(0.50,-0.02);
+                  \node[circle, draw=black, fill=white, inner sep=0pt,minimum size=3pt] at (0.50,0) {};
+                  \draw (0.50,0) node[below=-2pt] {\tiny{$a$\strut}};
+                  \draw (1.40,0) node[below=-2pt] {\tiny{$b$\strut}};
+                  \node[circle,draw=black, fill=white, inner sep=0pt,minimum size=3pt] at (1.40,0) {};
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+          </cell>
+        </row>
+        <row>
+          <cell><m>[a, b[</m></cell>
+          <cell><m>\{x \in \mathbb{R} \telque a \leqslant x \lt b\}</m></cell>
+          <cell>
+            <image>
+              <latex-image>
+                \begin{tikzpicture}
+                  \draw[-latex] (0,0) -- (2,0);
+                  \fill[fill=black, opacity=0.8](0.50,-0.02)--(0.50,0.02)--(1.40,0.02)--(1.40,-0.02)--(0.50,-0.02);
+                  \node[circle, draw=black, fill=black, inner sep=0pt,minimum size=3pt] at (0.50,0) {};
+                  \draw (0.50,0) node[below=-2pt] {\tiny{$a$\strut}};
+                  \draw (1.40,0) node[below=-2pt] {\tiny{$b$\strut}};
+                  \node[circle,draw=black, fill=white, inner sep=0pt,minimum size=3pt] at (1.40,0) {};
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+          </cell>
+        </row>
+        <row>
+          <cell><m>]a, b]</m></cell>
+          <cell><m>\{x \in \mathbb{R} \telque a \lt x \leqslant b\}</m></cell>
+          <cell>
+            <image>
+              <latex-image>
+                \begin{tikzpicture}
+                  \draw[-latex] (0,0) -- (2,0);
+                  \fill[fill=black, opacity=0.8](0.50,-0.02)--(0.50,0.02)--(1.40,0.02)--(1.40,-0.02)--(0.50,-0.02);
+                  \node[circle, draw=black, fill=white, inner sep=0pt,minimum size=3pt] at (0.50,0) {};
+                  \draw (0.50,0) node[below=-2pt] {\tiny{$a$\strut}};
+                  \draw (1.40,0) node[below=-2pt] {\tiny{$b$\strut}};
+                  \node[circle,draw=black, fill=black, inner sep=0pt,minimum size=3pt] at (1.40,0) {};
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+          </cell>
+        </row>
+      </tabular>
+    </table>
+    </p>
+
+    <p>
+    À ces intervalles bornés s'ajoutent les ensembles des réels inférieurs à une valeur ou supérieurs à une valeur.
+    </p>
+
+    <p>
+    Un <em>intervalle réel non borné</em> est un ensemble de nombres réels délimité par un nombre réel constituant une borne, soit inférieure ou soit supérieure. Un intervalle non borné contient tous les nombres réels supérieurs ou inférieurs à cette borne, la borne pouvant être incluse ou non dans l'intervalle.
+    </p>
+
+    <p>
+    <table>
+      <title>Intervalles non bornés</title>
+      <tabular>
+        <row header="yes" bottom="minor" >
+          <cell>Notation</cell>
+          <cell>En compréhension</cell>
+          <cell>Représentation visuelle</cell>
+        </row>
+        <row>
+          <cell><m>[a, \infty[</m></cell>
+          <cell><m>\{x \in \mathbb{R} \telque x \geqslant a\}</m></cell>
+          <cell>IMAGE</cell>
+        </row>
+        <row>
+          <cell><m>]a, \infty[</m></cell>
+          <cell><m>\{x \in \mathbb{R} \telque x \gt a\}</m></cell>
+          <cell>IMAGE</cell>
+        </row>
+        <row>
+          <cell><m>]\infty, a]</m></cell>
+          <cell><m>\{x \in \mathbb{R} \telque x \leqslant a\}</m></cell>
+          <cell>IMAGE</cell>
+        </row>
+        <row>
+          <cell><m>]\infty, a[</m></cell>
+          <cell><m>\{x \in \mathbb{R} \telque x \lt a\}</m></cell>
+          <cell>IMAGE</cell>
+        </row>
+      </tabular>
+    </table>
+    </p>
+
+    <p>
+    Puisque les intervalles sont des ensembles, on peut leur appliquer les opérations ensemblistes. Ainsi, on peut faire l'union, l'intersection et la différence d’intervalles.
+    </p>
+
+    <!--
+      EXEMPLE
+      Amyotte Exercices A.3  
+    -->
+    <p>
+      <example xml:id="exemple_intervalles1">
+        <statement>
+          <p>
+            Donnez une représentation visuelle des ensembles.
+          </p>
+          <ol cols="3">
+            <li><p>
+              <m>[-3,2]</m>.
+            </p></li>
+
+            <li><p>
+              <m>]4,5[</m>.
+            </p></li>
+
+            <li><p>
+              <m>]0,3] \cup [5,7[</m>.
+            </p></li>
+
+            <li><p>
+              <m>]\infty,4]</m>.
+            </p></li>
+
+            <li><p>
+              <m>[2,\infty[</m>.
+            </p></li>
+
+            <li><p>
+              <m>]\infty,-1[ \,\cup\, ]1, \infty[</m>.
+            </p></li>
+          </ol>
+        </statement>
+        <solution>
+          <p> 
+            <ol>
+              <li><p>
+                IMAGE
+              </p></li>
+
+              <li><p>
+                IMAGE
+              </p></li>
+
+              <li><p>
+                IMAGE
+              </p></li>
+
+              <li><p>
+                IMAGE
+              </p></li>
+
+              <li><p>
+                IMAGE
+              </p></li>
+
+              <li><p>
+                IMAGE
+              </p></li>
+            </ol>
+          </p>
+        </solution>
+      </example>
+    </p>
+
+    <p>
+      <example xml:id="exemple_intervalles2">
+        <statement>
+          <p>
+            Donnez l'ensemble correspondant à la représentation visuelle.
+          </p>
+          <ol cols="2">
+            <li><p>
+              IMAGE
+            </p></li>
+
+            <li><p>
+              IMAGE
+            </p></li>
+
+            <li><p>
+              IMAGE
+            </p></li>
+
+            <li><p>
+              IMAGE
+            </p></li>
+
+            <li><p>
+              IMAGE
+            </p></li>
+
+            <li><p>
+              IMAGE
+            </p></li>
+          </ol>
+        </statement>
+        <solution>
+          <p> 
+            <ol>
+              <li><p>
+                <m>]-4,-1[</m>.
+              </p></li>
+
+              <li><p>
+                <m>[\frac{1}{2},\infty[</m>.
+              </p></li>
+
+              <li><p>
+                <m>]-\infty,0[</m>.
+              </p></li>
+
+              <li><p>
+                <m>]5,6]</m>.
+              </p></li>
+
+              <li><p>
+                <m>[1,2] \cup [3,4]</m>
+              </p></li>
+
+              <li><p>
+                <m>]-1,1[ \,\cup\, ]2,\infty[</m>
+              </p></li>
+            </ol>
+          </p>
+        </solution>
+      </example>
+    </p>
+
+  </subsection>
+
+</section>
